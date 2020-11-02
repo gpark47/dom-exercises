@@ -22,30 +22,38 @@
         <script>
          // purposely hard to read!  -- please ignore it
          function letsTag(a,c,b={}){output=`<${c} `;Object.keys(b).map((k,i)=>output+=`${k}="${b[k]}" `);output+=`>${a}</${c}>`;return output}
+         //above function is empty code, but you need to connect the tags, how?
+         ///to generate the cards, what tag do you start with
+         //letsTag(something, otherthing) made otherthing as a html tag, and made something as its content
+         ///we can see that the first thing is the content, the second is HTML tag
          
+         ///we should tackle the main, because its easy to create, to fill in the p for letstag('I am the content', 'p');
+         ///letsTag(sample.blurb, 'p') allows us to get to the text inside of the main
+         ///next, we must build into the main tag, how?
+         ////we must enclose the main tag, the p tag into the main tag 
          function headMe (titleText) {
              let output ;
              return output;
          }
          function footMe () {
              let link ;
-             return 
+             return alink, footer
          }
 
          function mainMe (blurb) {
-             let p ;
-             return 
+             let para = letsTag(blurb, 'p') ; //DID THIS, the principle is that we run the same function over and over again to produce increasingly complex HTML
+             return letsTag(para, main)
          }
 
-         function cardMe (person) {
+         function cardMe (person) { /// this wraps everything into a card
              let header ;
-             let main ;
+             let main = ;
              let footer ;
              let card ;
              return card;
          }
 
-         function makeAllTheCards (people) {
+         function makeAllTheCards (people) { //this takes a list of cards and puts them together
              let output = '';
              /* for () {
               *     output += ;
